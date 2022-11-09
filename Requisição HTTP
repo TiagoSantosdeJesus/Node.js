@@ -1,0 +1,18 @@
+Exercício:
+Sem usar bibliotecas, crie um projeto simples em Node.js que seja capaz de responder requisições HTTP.
+Explique como rodar e testar.
+
+// Importação da biblioteca http
+const {criarServer} = require("http");
+
+// Configuração da porta e criação principal do servidor
+const PORTA = process.env.PORT || 8080;
+const servidor = criarServer();
+
+// Requisição web para que o servidor responda e imprima na tela quando estiver rodando.
+servidor.on("request", (request, response) => {
+    response.end("O servidor está ativo!");
+});
+servidor.listen(PORT,() => {
+    console.log(`Servidor iniciado na porta ${PORTA}`);
+});
