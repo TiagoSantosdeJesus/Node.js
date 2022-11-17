@@ -1,6 +1,6 @@
-Exercício:
+/*Exercício:
 Sem usar bibliotecas, crie um projeto simples em Node.js que seja capaz de responder requisições HTTP.
-Explique como rodar e testar.
+Explique como rodar e testar.*/
 
 // Importação da biblioteca http
 const http = require('http');
