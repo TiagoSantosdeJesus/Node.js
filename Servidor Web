@@ -1,1 +1,25 @@
+//Crie um pequeno servidor web que contenha várias rotas. Em cada rota, você deverá fazer o controle do fluxo de requisições de maneira estática ou dinâmica, alterne entre essas formas usando placeholders e query.
 
+const express = require('express')
+const Servidor = express()
+const port = 3000
+
+Servidor.get ('/cadastro', (req, res) =>{
+    res.send('Lista de usuário');
+});
+
+Servidor.post('/cadastro', (req, res) =>{
+    res.send('Inserir usuário');
+});
+
+Servidor.put('/cadastro: id', (req, res) =>{
+    res.send(`Editar um usuário com o id ${req.params.id}`);
+});
+
+Servidor.delete('/cadastro: id', (req, res) => {
+    res.send(`Excluir um usuário com o id ${req.params.id}`);
+});
+    
+app.listen(3000, () => {
+    console.log("Exemplo app node rodando no endereço http://localhost:3000")
+});
